@@ -1,13 +1,21 @@
 {
   "name": "@kevinhle/use-airports-autocomplete",
   "version": "1.0.0",
-  "description": "airports autocomplete",
+  "description": "React custom hook that provide airports autocomplete to be used with a headless dropdown component",
   "main": "index.js",
   "scripts": {
     "build": "npx tsc"
   },
-  "author": "Kevin H Le (Obex Solutions)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khle/use-airports-autocomplete"
+  },
+  "author": "Kevin H Le",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/khle/use-airports-autocomplete/issues"
+  },
+  "homepage": "https://github.com/khle/use-airports-autocomplete#readme",
   "devDependencies": {
     "@types/node": "^17.0.21",
     "typescript": "^4.6.2"
