@@ -1,8 +1,8 @@
 {
   "name": "@kevinhle/use-airports-autocomplete",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "React custom hook that provide airports autocomplete to be used with a headless dropdown component",
-  "main": "index.js",
+  "main": "./lib/index.js",
   "scripts": {
     "build": "npx tsc"
   },
@@ -10,6 +10,12 @@
     "type": "git",
     "url": "git+https://github.com/khle/use-airports-autocomplete"
   },
+  "keywords": [
+    "autocomplete",
+    "react",
+    "hook",
+    "airports"
+  ],
   "author": "Kevin H Le",
   "license": "ISC",
   "bugs": {
