@@ -26,7 +26,7 @@ Other than that, this package is a complete fresh implementation of a React cust
 
 ```Typescript
 import { useEffect, ChangeEvent } from 'react'
-import { useAirportsAutocomplete, Suggestion } from './AirportsAutocomplete'
+import { useAirportsAutocomplete, Suggestion } from '@kevinhle/use-airports-autocomplete'
 import {
   Combobox,
   ComboboxInput,
