@@ -1,8 +1,9 @@
 export interface HookArgs {
     debounce?: number;
+    minLengthSuggest?: number;
     defaultValue?: string;
 }
-interface Suggestion {
+export interface Suggestion {
     name: string;
     city: string;
     country: string;
@@ -28,5 +29,5 @@ interface HookReturn {
     clearSuggestions: () => void;
     init: () => void;
 }
-export declare function useAirportsAutocomplete({ debounce, defaultValue, }?: HookArgs): HookReturn;
+export declare function useAirportsAutocomplete({ debounce, minLengthSuggest, defaultValue, }?: HookArgs): HookReturn;
 export default useAirportsAutocomplete;

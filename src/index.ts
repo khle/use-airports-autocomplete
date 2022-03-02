@@ -2,14 +2,16 @@ import { useState, useCallback } from "react"
 import _debounce from "./debounce"
 import Fuse from "fuse.js"
 
-const MIN_LENGTH_SEARCH = 2
+const DEFAULT_DEBOUNCE = 200
+const MIN_LENGTH_SUGGEST = 2
 
 export interface HookArgs {
   debounce?: number
+  minLengthSuggest?: number
   defaultValue?: string
 }
 
-interface Suggestion {
+export interface Suggestion {
   name: string
   city: string
   country: string
@@ -42,7 +44,8 @@ interface HookReturn {
 import AIRPORTS_DATA from "./airports"
 
 export function useAirportsAutocomplete({
-  debounce = 200,
+  debounce = DEFAULT_DEBOUNCE,
+  minLengthSuggest = MIN_LENGTH_SUGGEST,
   defaultValue = "",
 }: HookArgs = {}): HookReturn {
   const [ready, setReady] = useState(false)
@@ -63,7 +66,7 @@ export function useAirportsAutocomplete({
 
   const fetchPredictions = useCallback(
     _debounce(async (val: string) => {
-      if (!val || val.length < MIN_LENGTH_SEARCH) {
+      if (!val || val.length < minLengthSuggest) {
         clearSuggestions()
         return
       }
